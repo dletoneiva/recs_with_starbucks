@@ -1,4 +1,4 @@
-reward,difficulty,duration,offer_id,channel_0_email,channel_0_web,channel_1_ email,channel_1_ mobile,channel_2_ mobile,channel_2_ social,channel_3_ social,offer_type_bogo,offer_type_discount,offer_type_informational
+reward,difficulty,duration,offer_id,channel_0_email,channel_0_web,channel_1_email,channel_1_mobile,channel_2_mobile,channel_2_social,channel_3_social,offer_type_bogo,offer_type_discount,offer_type_informational
 10,10,7,ae264e3637204a6fb9bb56bc8210ddfd,1,0,0,1,0,1,0,1,0,0
 10,10,5,4d5c57ea9a6940dd891ad53e9dbe8da0,0,1,1,0,1,0,1,1,0,0
 0,0,4,3f207df678b143eea3cee63160fa8bed,0,1,1,0,1,0,0,0,0,1
