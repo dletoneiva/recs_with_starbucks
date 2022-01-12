@@ -36,9 +36,9 @@ I'll start with 100, then additive increasing to check on performance.
 GridSearchCV is a really powerful tool that runs through a grid of parameters trying to predict the target variable. I'll use that for model tuning.
 
 ## Files in the repository
-`data_wrangling.ipynb` Data preprocessing file.
-`data_analysis.ipynb` File used to conduct exploratory data analysis.
-`data_modeling.ipynb` File used to actually implement algorithms.
+`data_wrangling.ipynb` Data preprocessing file. <br>
+`data_analysis.ipynb` File used to conduct exploratory data analysis.<br>
+`data_modeling.ipynb` File used to actually implement algorithms.<br>
 
 ### Data Sets
 Those are the files used, and their respectives, properly pre-processed (\_clean suffix).
