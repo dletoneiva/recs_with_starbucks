@@ -35,13 +35,34 @@ I'll start with 100, then additive increasing to check on performance.
 
 GridSearchCV is a really powerful tool that runs through a grid of parameters trying to predict the target variable. I'll use that for model tuning.
 
-## Metrics
+## Files in the repository
+`data_wrangling.ipynb` Data preprocessing file.
+`data_analysis.ipynb` File used to conduct exploratory data analysis.
+`data_modeling.ipynb` File used to actually implement algorithms.
+
+### Data Sets
+Those are the files used, and their respectives, properly pre-processed (\_clean suffix).
+
+* portfolio.json - containing offer ids and meta data about each offer (duration, type, etc.)
+* profile.json - demographic data for each customer
+* transcript.json - records for transactions, offers received, offers viewed, and offers completed
+
+
+## Performance Metrics
 
 The following metrics are going to be used to measure the models performance:
 <ol>
     <li> <strong>Confusion matrix</strong>: the predicted variable, which is predicting if an user will respond or not to an offer, is simply binary. This way, the confusion matrix is 2x2, hence providing a clear view of how the model is going. We're trying to minimize both errors (types I and II), but prioritizing to minimize false negatives (type II). The reason for that is that is better to send an offer to a customer that won't respond than keeping one possible buying customer from actually buying. Therefore, the higher the numbers in the main diagonal, the better.
     <li> <strong>Balanced accuracy score</strong>: this is a ratio that divides the number of correct predictions versus the total predictions, considering non-normal distributions. The main target variable we're trying to predict is binary, with dataset mean on 0.2. That means it is highly unbalanced, and taking this into account would get more precision. We're aiming to get is as close as possible to 1. 
 </ol>
+
+## Tests conducted
+### Random Forest
+Tests were conducted from 100 to 1000 trees, in steps of 100. One characteristic to notice at this point is that overall runtime was sort of long (it took 18 minutes to run in my local machine). Balanced accuracy of 50%, and no false positives. We had around ~6.5k false negatives, which can be possible customers. This can get a little bit lower.
+
+### Bernoulli Naive-Bayes
+Using the Bernoulli Naive-Bayes led to the exact same results. Parameters tested included alpha (Laplacian smoothing) negative powers of ten from 1 to 9.
+This doesn’t seem to be overfitting, but the training data might be more on the lower side. However, results seem pretty acceptable if compared to using nothing.
 
 ## Possible improvements: 
 <ol>
